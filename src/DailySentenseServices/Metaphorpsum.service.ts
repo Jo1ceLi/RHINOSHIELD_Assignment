@@ -1,5 +1,6 @@
 import {
   BadRequestException,
+  Inject,
   Injectable,
   RequestTimeoutException,
 } from '@nestjs/common';
@@ -9,7 +10,10 @@ import { timeout, map, catchError, throwError, firstValueFrom } from 'rxjs';
 
 @Injectable()
 export class Metaphorpsum implements GetDailySentense {
-  constructor(private httpService: HttpService) {}
+  constructor(
+    @Inject(HttpService)
+    private httpService: HttpService,
+  ) {}
   async getSetense(): Promise<string> {
     const res$ = this.httpService
       .get('http://metaphorpsum.com/sentences/3')
