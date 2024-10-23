@@ -1,9 +1,9 @@
 使用說明
 
-1. npm i
-2. npm run start:dev
+1. `npm i`
+2. `npm run start:dev`
 3. `curl "localhost:3000/?source=M"` -> Metaphorpsum or `curl "localhost:3000/?source=I"` -> Itsthisforthat
-4. npm run test -> unit test
+4. `npm run test` -> unit test
 
 可優化的部分以及設計說明
 
